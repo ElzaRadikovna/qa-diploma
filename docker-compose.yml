@@ -1,20 +1,15 @@
 services:
   mysql:
-    image: mysql:8.0.34
+    image: mysql:8.0.18
     ports:
       - '3306:3306'
-    volumes:
-      - ./data_mysql:/var/lib/mysql
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=app
       - MYSQL_USER=app
       - MYSQL_PASSWORD=pass
   postgres:
-    image: postgres:14-alpine
-    container_name: pstg-container
-    volumes:
-      - ./data_postgres:/var/lib/postgresql/data
+    image: postgres:latest
     ports:
       - '5432:5432'
     environment:
@@ -24,6 +19,5 @@ services:
   node-app:
     build: ./gate-simulator
     image: node-app:1.0
-    container_name: node
     ports:
       - '9999:9999'
