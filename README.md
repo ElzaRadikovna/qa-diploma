@@ -40,7 +40,7 @@
 1. Открыть проект в IntelliJ IDEA
 1. Запустить контейнеры в терминале IntelliJ IDEA, набрав команду:
 
-docker-compose up
+> docker-compose up
 
 1. Открыть новую вкладку и запустить приложение командой:
 - MySQL: 
