@@ -51,18 +51,18 @@ public class CreditCardPage {
     }
 
     public void formatIsInvalid() {
-        errorFormat.shouldBe(visible, Duration.ofSeconds(10));
+        errorFormat.shouldBe(visible);
     }
 
     public void invalidDate() {
-       errorDate.shouldBe(visible, Duration.ofSeconds(10));
+       errorDate.shouldBe(visible);
     }
 
     public void cardExpired() {
-        invalidDate.shouldBe(visible, Duration.ofSeconds(10));
+        invalidDate.shouldBe(visible);
     }
 
     public void wrongFormat() {
-        errorEmpty.shouldBe(visible, Duration.ofSeconds(15));
+        errorEmpty.shouldBe(visible);
     }
 }
